@@ -5,7 +5,7 @@ import { GET_DIGIMON_LIST } from "../config/API";
 
 export const useDigimonList = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [digimon, setDigimon] = useState([]);
+  const [digimon, setDigimon] = useState<any[]>([]);
   const [nextPage, setNextPage] = useState("");
   const [isSearch, setIsSearch] = useState(false);
 
