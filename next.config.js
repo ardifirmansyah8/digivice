@@ -4,4 +4,14 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  ...nextConfig,
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://www.digi-api.com/api/v1/:path*',
+      },
+    ]
+  },
+}
